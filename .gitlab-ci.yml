@@ -1,0 +1,74 @@
+#image: node:latest
+stages:
+  - env
+#  - test
+  - npm-build
+  - docker-build
+  - deploy
+
+cache:
+  paths:
+  - node_modules/
+
+# 安装依赖
+install:
+  stage: env
+  script:
+    - yarn --version
+    - yarn
+  tags:
+    - node-build
+
+# 代码质量
+#eslint:
+#  stage: test
+#  script:
+#  - npm run eslint
+#  tags:
+#    - node-build
+#  except:
+#    - master
+
+# 代码测试
+#test:
+#  stage: test
+#  coverage: '/^Lines\s*:\s(\d+(?:\.\d+)?%)\s\(\s\d+\/\d+\s\)/'
+#  script:
+#    - npm test
+#  tags:
+#    - node-build
+#  except:
+#    - master
+
+# npm 打包
+npm build:
+  stage: npm-build
+  script:
+    - npm run build:release
+  tags:
+    - node-build
+  only:
+    - dev
+  artifacts:
+    paths:
+      - build
+
+docker build:
+  stage: docker-build
+  script:
+    - docker-compose build
+    - docker-compose push
+  tags:
+    - shell-build
+  only:
+    - dev
+
+dev deploy:
+  stage: deploy
+  script:
+    - docker-compose pull
+    - docker-compose up -d
+  tags:
+    - deploy-dev
+  only:
+    - dev

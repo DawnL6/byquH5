@@ -1,0 +1,9 @@
+version: '3'
+services:
+  purchase_h5:
+    restart: always
+    image: nexus.bdfint.com:5000/purchase_h5:latest
+    container_name: purchase_h5
+    build: .
+    ports:
+      - "9561:80"
