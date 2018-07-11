@@ -1,0 +1,42 @@
+@import '../../style/common.less';
+
+@lineColor :#e5e5e5;//默认边框颜色
+
+.list{
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  li{
+    width: 33.33%;
+    text-align: center;
+    border-bottom: 1px solid @lineColor;
+    &:nth-child(7){
+      border-bottom: none
+    }
+    &:nth-child(8){
+      border-bottom: none
+    }
+    &:nth-child(9){
+      border-bottom: none
+    }
+    &:nth-child(3n) {
+      p,span{
+        border-right: none
+      };
+    }
+    span{
+      display: block;
+      margin-top: 14px;
+      padding-bottom: 6px;
+      border-right: 1px solid @lineColor;
+    }
+    p{
+      margin-bottom: 14px;
+      font-size: 14px;
+      color: #888;
+      border-right: 1px solid @lineColor;
+    }
+  }
+}
+

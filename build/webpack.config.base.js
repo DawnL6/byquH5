@@ -3,14 +3,6 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const htmlWebpackPlugin = require('html-webpack-plugin')
 const glob = require('glob');
 
-var getHtmlConfig = function (name, chunks) {
-    return {
-        template: `./src/pages/${name}/index.html`,
-        filename: `pages/${name}/index.html`,
-        inject: 'body',
-        chunks: chunks
-    };
-};
 
 const getFiles = (src, replaceDir = '') => {
     let files = glob.sync(src);
