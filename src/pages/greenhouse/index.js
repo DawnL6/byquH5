@@ -10,6 +10,7 @@ new Vue({
   data() {
     return {
       tabType: '',
+      isClose: false
     }
   },
   components: {
@@ -18,5 +19,10 @@ new Vue({
   },
   mounted() {
 
+  },
+  methods: {
+    close() {
+      this.isClose = !this.isClose
+    }
   }
 });

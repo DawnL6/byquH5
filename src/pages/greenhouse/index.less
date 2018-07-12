@@ -69,3 +69,52 @@
   background-image: url('../../images/bg.jpeg')
 }
 
+.more{
+  background-color: #fff;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  ul{
+    display: flex;
+    flex-wrap: wrap;
+    li{
+      width: 25%;
+      text-align: center;
+      margin-top: 18px;
+      img{
+        width: 38px;
+        margin-bottom: 8px;
+      }
+      p{
+        font-size: 13px;
+        color: #000000;
+        text-align: center;
+        line-height: 15px;
+      }
+    }
+  }
+}
+
+.layer{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .4);
+  z-index: 11;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .ad{
+    width: 72%;
+    text-align: center;
+    .bg{
+      width: 100%;
+    }
+    .close{
+      width: 32px;
+      margin-top: 10px;
+    }
+  }
+}
+

@@ -61,10 +61,9 @@ const config = {
         }]
       },
       {
-        test: /\.(woff|woff2|ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: 'file-loader?name=[name].[ext]&publicPath=../../&outputPath=static/fonts/',
-        exclude: /(static\/images|pages)/
-      },
+        test: /\.(htm|html)$/i,
+        loader: 'html-withimg-loader'
+    }
     ]
   },
   resolve: {
