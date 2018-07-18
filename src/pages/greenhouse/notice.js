@@ -2,10 +2,10 @@
 import Vue from 'vue'
 import vHeader from '../../components/header.vue'
 import vContent from '../../components/content.vue'
-import './index.less'
+import './notice.less'
 
 new Vue({
-  el: '#app',
+  el: '#notice',
   data() {
     return {
       tabType: '',
@@ -15,16 +15,5 @@ new Vue({
   components: {
     vHeader,
     vContent
-  },
-  mounted() {
-
-  },
-  methods: {
-    close() {
-      this.isClose = !this.isClose
-    },
-    test(){
-
-    }
   }
 });

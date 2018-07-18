@@ -2,29 +2,29 @@
 import Vue from 'vue'
 import vHeader from '../../components/header.vue'
 import vContent from '../../components/content.vue'
+import vMessage from '../../components/message.vue'
 import './index.less'
 
 new Vue({
-  el: '#app',
+  el: '#coupon',
   data() {
     return {
       tabType: '',
-      isClose: false
+      isShow: false,
+      title: '456'
     }
   },
   components: {
     vHeader,
-    vContent
-  },
-  mounted() {
-
+    vContent,
+    vMessage
   },
   methods: {
-    close() {
-      this.isClose = !this.isClose
+    more() {
+      this.isShow = true
     },
-    test(){
-
+    close() {
+      this.isShow = false
     }
   }
 });

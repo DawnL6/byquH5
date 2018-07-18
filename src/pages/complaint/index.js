@@ -5,7 +5,7 @@ import vContent from '../../components/content.vue'
 import './index.less'
 
 new Vue({
-  el: '#app',
+  el: '#complaint',
   data() {
     return {
       tabType: '',
@@ -15,16 +15,5 @@ new Vue({
   components: {
     vHeader,
     vContent
-  },
-  mounted() {
-
-  },
-  methods: {
-    close() {
-      this.isClose = !this.isClose
-    },
-    test(){
-
-    }
   }
 });

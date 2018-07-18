@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="coupon" v-cloak>
+    <v-header title="优惠券管理"></v-header>
+    <v-content>
+      <div class="notice">
+        <div class="cc">
+          <p>
+            添加优惠劵，是线下很好的导流工具
+          </p>
+          <p @click="more">
+            更多说明
+          </p>
+        </div>
+      </div>
+      <v-message :title="title" :is-show="isShow" @close='close'>
+        <div slot="text">
+
+          231111111111111
+        </div>
+      </v-message>
+    </v-content>
+
+  </div>
+</body>
+
+</html>
