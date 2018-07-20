@@ -61,9 +61,14 @@ const config = {
         }]
       },
       {
-        test: /\.(htm|html)$/i,
-        loader: 'html-withimg-loader'
-    }
+        test: /\.html$/,
+        use: [{
+          loader: 'html-loader',
+          options: {
+            minimize: true
+          }
+        }],
+      }
     ]
   },
   resolve: {
