@@ -10,7 +10,17 @@
 
 <body>
   <div id="coupon" v-cloak>
-    <v-header title="优惠券管理"></v-header>
+    <v-header title="优惠券管理">
+      <div slot="right">
+        添加
+      </div>
+      </v-message>
+    </v-header>
+    <v-message :title="title" :is-show="isShow" @close='close'>
+      <div slot="text">
+        231111111111111
+      </div>
+    </v-message>
     <v-content>
       <div class="notice">
         <div class="cc">
@@ -22,14 +32,99 @@
           </p>
         </div>
       </div>
-      <v-message :title="title" :is-show="isShow" @close='close'>
-        <div slot="text">
-
-          231111111111111
-        </div>
-      </v-message>
+      <ul class="list">
+        <li>
+          <section class="top">
+            <div>
+              <h5>新年活动促销</h5>
+              <span>进行中</span>
+            </div>
+            <div>
+              <span>5元</span>
+              <span>满50元可用</span>
+            </div>
+            <div>
+              <p>17-11-25 12点 至 17-12-25 12点</p>
+              <a href="#">修改</a>
+            </div>
+          </section>
+          <section class="bot">
+            <div>
+              <p>共计</p>
+              <span>200</span>
+            </div>
+            <div>
+              <p>领取</p>
+              <span>140</span>
+            </div>
+            <div>
+              <p>使用</p>
+              <span>40</span>
+            </div>
+          </section>
+        </li>
+        <li>
+          <section class="top">
+            <div>
+              <h5>新年活动促销</h5>
+              <span class="close">已关闭</span>
+            </div>
+            <div>
+              <span>5元</span>
+              <span>满50元可用</span>
+            </div>
+            <div>
+              <p>17-11-25 12点 至 17-12-25 12点</p>
+              <a href="#">修改</a>
+            </div>
+          </section>
+          <section class="bot">
+            <div>
+              <p>共计</p>
+              <span>200</span>
+            </div>
+            <div>
+              <p>领取</p>
+              <span>140</span>
+            </div>
+            <div>
+              <p>使用</p>
+              <span>40</span>
+            </div>
+          </section>
+        </li>
+        <li>
+          <section class="top">
+            <div>
+              <h5>新年活动促销</h5>
+              <span class="period">已过期</span>
+            </div>
+            <div>
+              <span>5元</span>
+              <span>满50元可用</span>
+            </div>
+            <div>
+              <p>17-11-25 12点 至 17-12-25 12点</p>
+              <a href="#">修改</a>
+            </div>
+          </section>
+          <section class="bot">
+            <div>
+              <p>共计</p>
+              <span>200</span>
+            </div>
+            <div>
+              <p>领取</p>
+              <span>140</span>
+            </div>
+            <div>
+              <p>使用</p>
+              <span>40</span>
+            </div>
+          </section>
+        </li>
+      </ul>
     </v-content>
-
   </div>
 </body>
 

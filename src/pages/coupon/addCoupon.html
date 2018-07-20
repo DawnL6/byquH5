@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="addCoupon" v-cloak>
+    <v-header title="添加优惠券">
+    </v-header>
+    <v-content>
+      <div class="notice">
+        <div class="cc">
+          请合理输入信息，如果被用户投诉无法兑现优惠劵上的信息，我们将停止你使用该功能，并降低权重。
+        </div>
+      </div>
+      <div class="content">
+        <div class="item">
+          <span>活动名称</span>
+          <input type="text" placeholder="活动名称可输入4~8个字">
+        </div>
+        <div class="item">
+          <span>抵用金额</span>
+          <input type="text" placeholder="优惠劵金额">
+          <span>元</span>
+        </div>
+        <div class="item">
+          <span>使用条件</span>
+          <input type="text" placeholder="如：满100元减10元，不能超过10个字">
+        </div>
+        <div class="item">
+          <span>开始时间</span>
+          <input type="text" placeholder="请选择开始时间" readonly @click="openPicker('star')" v-model="startTime">
+        </div>
+        <div class="item">
+          <span>结束时间</span>
+          <input type="text" placeholder="请选择结束时间" readonly @click="openPicker('end')" v-model="endTime">
+        </div>
+        <div class="item">
+          <span>生成数量</span>
+          <input type="text" placeholder="请输入生成数量，上限100">
+        </div>
+      </div>
+      <van-popup v-model="show" position="bottom">
+        <van-datetime-picker v-model="currentDate" type="date" :min-date="minDate" :max-date="maxDate" @cancel="cancel" @confirm="confirm"
+        />
+      </van-popup>
+    </v-content>
+  </div>
+  </div>
+</body>
+
+</html>
