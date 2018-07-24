@@ -53,6 +53,7 @@ header .cc div {
 }
 
 header .cc div:nth-child(2){
+    flex: 8;
     text-align: center;
     font-size: 18px;
     font-weight: 600;

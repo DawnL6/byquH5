@@ -1,0 +1,97 @@
+@import '../../style/common.less';
+.tab{
+    width: 100%;
+    background-color: #fff;
+    ul{
+        display: flex;
+        li{
+            flex: 1;
+            span{
+                height: 44px;
+                line-height: 44px;
+                text-align: center;
+                display: block;
+                margin: 0 auto;
+                width: 88%;
+                &.sure{
+                    border-bottom: 2px solid #2DCD64;
+                }
+            }
+        }
+    }
+}
+
+.list{
+    width: 100%;
+    li{
+      margin-top: 10px;
+      background-color: #fff;
+      .top{
+        padding: 0 15px;
+        border-bottom: 1px solid #E5E5E5;
+        div{
+          display: flex;
+          justify-content: space-between;
+          &:first-child{
+            padding-top: 12px;
+            font-size: 16px;
+            color: #000000;
+            span{
+              font-size: 13px;
+              color: #888;
+            }
+          }
+          &:nth-child(2){
+            margin-top: 10px;
+            margin-bottom: 12px;
+            p{
+              font-size: 13px;
+              color: #888;
+              span{
+                &:first-child{
+                  font-size: 15px;
+                  color: #FF6260;
+                }
+              }
+            }
+            span{
+              font-size: 13px;
+              color: #888;
+            }
+          }
+        }
+      }
+      .bot{
+        display: flex;
+        background-color: #fff;
+        padding: 10px 15px;
+        justify-content: space-between;
+          p{
+            margin-bottom: 5px;
+            color: #888888;
+            span{
+              font-size: 13px;
+              &:first-child{
+                color: #566B96;
+              }
+            }
+        }
+          span{
+            font-size: 13px;
+
+          &.deafult{
+            color: #333;
+          }
+          &.sure{
+            color: #FF6260
+          }
+          &.no{
+            color: #2DCD64;
+          }
+          &.nol{color: #888;
+
+          }
+        }
+      }
+    }
+  }

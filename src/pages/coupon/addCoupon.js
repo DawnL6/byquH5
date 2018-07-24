@@ -19,7 +19,8 @@ new Vue({
       startTime: '',
       endTime: '',
       show: false,
-      type: null
+      type: null,
+      
     }
   },
   components: {
@@ -52,10 +53,9 @@ new Vue({
         this.endTime = dayjs(value).format('YYYY年MM月DD日')
       }
       this.cancel()
+    },
+    addSubmit(){
+
     }
-    // handleConfirm(value) {
-    //   this.startTime = value
-    //   console.log(value)
-    // }
   }
 });

@@ -10,7 +10,8 @@ const webpackConfigBase = require('./webpack.config.base');
 module.exports = merge(webpackConfigBase, {
   mode: 'production', // 通过 mode 声明生产环境
   output: {
-    filename: 'pages/[name].[chunkhash:8].js',
+    filename: 'static/js/[name].[chunkhash:8].js',
+    publicPath: '../../'
   },
   resolve: {
     alias: {
@@ -61,7 +62,7 @@ module.exports = merge(webpackConfigBase, {
       verbose: true,
       dry: false,
     }),
-    new ExtractPlugin('static/css/pages/[name].[hash:8].min.css'),
+    new ExtractPlugin('static/css/[name].[hash:8].min.css'),
     new OptimizeCSSPlugin({
       cssProcessorOptions: {
         safe: true

@@ -45,6 +45,7 @@
           <input type="text" placeholder="请输入生成数量，上限100">
         </div>
       </div>
+      <div class="but" @click="addSubmit">提交</div>
       <van-popup v-model="show" position="bottom">
         <van-datetime-picker v-model="currentDate" type="date" :min-date="minDate" :max-date="maxDate" @cancel="cancel" @confirm="confirm"
         />
